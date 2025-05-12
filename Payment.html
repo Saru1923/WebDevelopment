@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fc;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .payment-container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 2px solid #4caf50;
+            text-align: center;
+        }
+
+        .payment-container label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .payment-container select,
+        .payment-container input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #4caf50;
+        }
+
+        .payment-button {
+            display: block;
+            width: 100%;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .payment-button:hover {
+            background-color: #45a049;
+        }
+
+        .confirmation-message {
+            display: none;
+            text-align: center;
+            font-weight: bold;
+            color: #4caf50;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+<body onload="loadCourse()">
+    <header>
+        <h1>Course Payment</h1>
+    </header>
+
+    <div class="payment-container">
+        <p>You are paying for:<b> <span id="selected-course"></b></span></p>
+
+        <label for="payment-method">Choose Payment Method:</label>
+        <select id="payment-method" required>
+            <option value="UPI">UPI</option>
+            <option value="Credit/Debit Card">Credit/Debit Card</option>
+            <option value="Net Banking">Net Banking</option>
+        </select>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" value="5000" readonly>
+
+        <button class="payment-button" onclick="processPayment()">Make Payment</button>
+
+        <!-- Confirmation Message -->
+        <p id="confirmation-message" class="confirmation-message"></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Online Course Reservation System</p>
+    </footer>
+
+    <script>
+       function loadCourse() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const course = urlParams.get("course");
+    document.getElementById("selected-course").innerText = course ? course : "No course selected";
+}
+
+        function processPayment() {
+            const course = document.getElementById("selected-course").innerText;
+            const paymentMethod = document.getElementById("payment-method").value;
+
+            if (!course || course === "No course selected") {
+                alert("Error: No course selected!");
+                return;
+            }
+
+            // Show payment confirmation
+            const confirmationMessage = document.getElementById("confirmation-message");
+            confirmationMessage.innerText = `Payment Successful for ${course} via ${paymentMethod}!`;
+            confirmationMessage.style.display = "block";
+        }
+    </script>
+</body>
+</html>

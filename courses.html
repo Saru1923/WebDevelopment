@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fc;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .course-card {
+            background-color: #ffffff;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            text-decoration: none; /* Removes underline */
+            display: block; /* Ensures the card behaves like a block element */
+        }
+
+        .course-card:hover {
+            background-color: #e6f7e9;
+            transform: scale(1.05);
+        }
+
+        .course-card h3 {
+            margin: 10px 0;
+            color: #4caf50;
+        }
+
+        .course-card p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Courses</h1>
+    </header>
+
+    <main>
+        <div class="course-grid">
+            <!-- Java Programming -->
+            <a href="java-course.html" class="course-card">
+                <h3>Java Programming</h3>
+                <p>Start Date: May 1, 2025</p>
+                <p>End Date: July 1, 2025</p>
+                <p>Duration: 2 months</p>
+                <p>Learn Java and object-oriented programming.</p>
+            </a>
+
+            <!-- Python for Beginners -->
+            <a href="python-course.html" class="course-card">
+                <h3>Python for Beginners</h3>
+                <p>Start Date: May 10, 2025</p>
+                <p>End Date: June 30, 2025</p>
+                <p>Duration: 1.5 months</p>
+                <p>Start coding with Python, the easiest language for beginners.</p>
+            </a>
+
+            <!-- Web Development -->
+            <a href="web-dev-course.html" class="course-card">
+                <h3>Web Development</h3>
+                <p>Start Date: June 1, 2025</p>
+                <p>End Date: September 1, 2025</p>
+                <p>Duration: 3 months</p>
+                <p>Master HTML, CSS, and JavaScript to build your own websites.</p>
+            </a>
+
+            <!-- Data Science Basics -->
+            <a href="data-science-course.html" class="course-card">
+                <h3>Data Science Basics</h3>
+                <p>Start Date: May 15, 2025</p>
+                <p>End Date: August 15, 2025</p>
+                <p>Duration: 3 months</p>
+                <p>Learn data analysis and visualization tools.</p>
+            </a>
+
+            <!-- Cryptography Essentials -->
+            <a href="cryptography-essentials-course.html" class="course-card">
+                <h3>Cryptography Essentials</h3>
+                <p>Start Date: June 5, 2025</p>
+                <p>End Date: August 5, 2025</p>
+                <p>Duration: 2 months</p>
+                <p>Explore encryption techniques and secure communication protocols.</p>
+            </a>
+
+            <!-- Machine Learning -->
+            <a href="machine-learning-course.html" class="course-card">
+                <h3>Machine Learning</h3>
+                <p>Start Date: July 1, 2025</p>
+                <p>End Date: October 1, 2025</p>
+                <p>Duration: 3 months</p>
+                <p>Understand ML algorithms and build predictive models.</p>
+            </a>
+
+            <!-- Cybersecurity Fundamentals -->
+            <a href="cybersecurity-course.html" class="course-card">
+                <h3>Cybersecurity Fundamentals</h3>
+                <p>Start Date: June 20, 2025</p>
+                <p>End Date: September 20, 2025</p>
+                <p>Duration: 3 months</p>
+                <p>Learn how to protect systems from cyber threats.</p>
+            </a>
+
+            <!-- Blockchain Basics -->
+            <a href="blockchain-course.html" class="course-card">
+                <h3>Blockchain Basics</h3>
+                <p>Start Date: August 1, 2025</p>
+                <p>End Date: November 1, 2025</p>
+                <p>Duration: 3 months</p>
+                <p>Explore blockchain technology and its applications.</p>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Online Course Reservation System</p>
+    </footer>
+</body>
+</html>
