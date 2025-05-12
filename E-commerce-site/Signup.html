@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FORM VALIDATION</title>
+<style>
+form {
+    margin: auto;
+    border: 1px solid;
+    width: 30%;
+    padding: 60px;
+    background-color:lightpink;
+}
+    header {
+            background-color: purple;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px; 
+            transition: background-color 0.3s ease; 
+        }
+        nav ul li a:hover {
+            background-color: lightblue; 
+            border-radius: 5px; 
+        }
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+ footer {
+            text-align: center;
+            padding: 10px;
+            background-color: purple;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+p{
+color:white;
+}
+</style>
+</head>
+<body>
+ <header>
+        <h1>Flora's Gift & Bouquet Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="Home1.html">Home1</a></li>
+                <li><a href="aboutr.html">Aboutr</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="orders.html">Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+<form name="checkingname" action=" " method="post">
+
+     
+    EMAIL_ADDRESS: <input type="text" id="t4" size="30" required>
+    <p id="p4"></p>
+    <br/>
+    
+    USERNAME: <input type="text" id="t6" size="30" maxlength="30" required>
+    <br/><br/>
+    
+    PASSWORD: <input type="password" id="t7" size="30" maxlength="10" required>
+    <br/><br/>
+    
+   <a id="submitLink" href="#"> <input type="button" value="Sign Up" onclick="check()"></a>
+</form>
+
+<script>
+function check() {
+    var nameRegexp = /^[a-zA-Z ]{1,30}$/; // Allow 1 to 30 characters
+    var mobileRegexp = /^[0-9]{10}$/; // 10 digits
+    var aadharRegexp = /^[0-9]{4}-[0-9]{4}-[0-9]{4}$/; // 12 digits with dashes
+    var emailRegexp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    var name = document.getElementById("t1").value;
+    var mobile = document.getElementById("t2").value;
+    var aadhar = document.getElementById("t3").value;
+    var email = document.getElementById("t4").value;
+    var dob = new Date(document.getElementById("t5").value);
+    var today = new Date();
+    var valid = true;
+
+    // Name Validation
+    if (nameRegexp.test(name)) {
+        document.getElementById("p1").innerHTML = "Valid name";
+        document.getElementById("p1").style.color = "green";
+    } else {
+        document.getElementById("p1").innerHTML = "Invalid name";
+        document.getElementById("p1").style.color = "red";
+        valid = false;
+    }
+
+    // Mobile Validation
+    if (mobileRegexp.test(mobile)) {
+        document.getElementById("p2").innerHTML = "Valid mobile number";
+        document.getElementById("p2").style.color = "green";
+    } else {
+        document.getElementById("p2").innerHTML = "Invalid mobile number";
+        document.getElementById("p2").style.color = "red";
+        valid = false;
+    }
+
+    // Aadhar Validation
+    if (aadharRegexp.test(aadhar)) {
+        document.getElementById("p3").innerHTML = "Valid Aadhar number";
+        document.getElementById("p3").style.color = "green";
+    } else {
+        document.getElementById("p3").innerHTML = "Invalid Aadhar number"; // Corrected message
+        document.getElementById("p3").style.color = "red";
+        valid = false;
+    }
+
+    // Email Validation
+    if (emailRegexp.test(email)) {
+        document.getElementById("p4").innerHTML = "Valid email address";
+        document.getElementById("p4").style.color = "green";
+    } else {
+        document.getElementById("p4").innerHTML = "Invalid email address";
+        document.getElementById("p4").style.color = "red";
+        valid = false;
+    }
+
+    // Date of Birth Validation (check if user is at least 18 years old)
+var age = today.getFullYear() - dob.getFullYear();
+var monthDifference = today.getMonth() - dob.getMonth();
+if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < dob.getDate())) {
+    age--;
+}
+
+if (age >= 18) {
+    document.getElementById("p5").innerHTML = "Valid Date of Birth";
+    document.getElementById("p5").style.color = "green";
+} else {
+    document.getElementById("p5").innerHTML = "You must be at least 18 years old";
+    document.getElementById("p5").style.color = "red";
+    valid = false;
+}
+if (valid) {
+        alert("Form submitted successfully!");
+        document.forms["checkingname"].submit();
+        submitLink.href = "Payment.html";
+    }
+}
+
+</script>
+ <footer>
+        <p>&copy; 2024 Gift & Bouquet Shop</p>
+    </footer>
+</body>
+</html>

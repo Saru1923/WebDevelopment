@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        header {
+            background-color: purple;
+            padding: 20px;
+            text-align: center;
+        }
+        p{
+           font-size:30px;
+           color:brown;
+          }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px; 
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: lightblue; 
+            border-radius: 5px; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color:white;
+        }
+h2{
+color:black;
+text-align: center;
+font-size:35px;
+}
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 15px; 
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s ease;
+            border: 2px solid #ccc; 
+            border-radius: 5px; 
+            background-color: white; 
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px; 
+            object-fit: cover; 
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            border-color: #007BFF; 
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .description {
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+     <header>
+        <h1>Flora's Gift & Bouquet Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="Home1.html">Home1</a></li>
+                <li><a href="aboutr.html">Aboutr</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="orders.html">Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+  <div class="container">
+        <h2>About Us</h2>
+         <p>Here we have the list of Gift items as per the categories of occasions as follows</p>
+        <div class="gallery">
+            <div class="gallery-item" onclick="location.href='aboutr.html'">
+                <img src="birthdaygifts.jpeg" alt="Birthday Gifts">
+                <div class="description">Birthday Gifts</div>
+            </div>
+            <div class="gallery-item" onclick="location.href='aboutr.html'">
+                <img src="greetingcard.jpeg" alt="Greeting Card">
+                <div class="description">Greeting Card</div>
+            </div>
+            <div class="gallery-item" onclick="location.href='aboutr.html'">
+                <img src="weddinggifts.jpeg" alt="Wedding Gifts">
+                <div class="description">Wedding Gifts</div>
+            </div>
+            <div class="gallery-item" onclick="location.href='aboutr.html'">
+                <img src="graduation.jpeg" alt="Graduation Gifts">
+                <div class="description">Graduation Gifts</div>
+            </div>
+            <div class="gallery-item" onclick="location.href='aboutr.html'">
+                <img src="sympathygifts.jpeg" alt="Sympathy Gifts">
+                <div class="description">Sympathy Gifts</div>
+            </div>
+            <div class="gallery-item" onclick="location.href='aboutr.html'">
+                <img src="retirementgifts.jpeg" alt="Retirement Gifts">
+                <div class="description">Retirement Gifts</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
