@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Saranathan College of Engineering</title>
+    <style>/* Reset some default styles */
+body, p, form {
+    margin: 0;
+    padding: 0;
+}
+h1{
+color:white;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styling*/
+ header {
+            background-color: purple;
+            padding: 20px;
+            text-align: center;
+        }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main section styling */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact-us {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us h1 {
+    text-align: center;
+    color: #004d99;
+}
+
+.contact-us p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input[type="submit"] {
+    background-color: #004d99;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #003366;
+}
+
+/* Address styling */
+address {
+    margin-top: 20px;
+    font-style: normal;
+    text-align: center;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color:purple;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+ <header>
+        <h1>Flora's Gift & Bouquet Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutr.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="orders.html">Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+    <main>
+        <section class="contact-us">
+            <h1>Contact Us</h1>
+            <p>Get in touch with us for any queries or feedback.</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone"><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea><br><br>
+                <input type="submit" value="Send">
+            </form>
+            <address>
+                Flora's Gifts & bouquet shop,<br>
+                Venkateswara Nagar, Panjappur,<br>
+                Tiruchirappalli - 620012,<br>
+                Tamil Nadu, India.<br>
+                Phone: +91 431 269 2000<br>
+                Email: [info@floragifts&bouquets.ac.in](mailto:info@floragifts&bouquets.ac.in)
+            </address>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Flora's Gifts & Bouquets. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
